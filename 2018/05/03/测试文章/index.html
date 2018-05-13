@@ -330,8 +330,12 @@
 
 
   
-    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
-      <div id="vcomment" class="comment"></div>
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div>
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
@@ -344,13 +348,13 @@ new Valine({
     verify: verify,
     app_id: "O1mRsyQgTopty4wbExSOuD1X-gzGzoHsz",
     app_key: "5zdadNvTGLxhhjwmosljr0Ym",
-    placeholder: "Just go go",
+    placeholder: "留下邮箱回复可以得到提醒哦~",
     avatar:"mm"
 });
 </script>
 
-    </section>
-  
+  </section>
+
 
 
           </div>
