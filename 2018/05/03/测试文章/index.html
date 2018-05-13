@@ -17,7 +17,7 @@
 <meta property="og:description" content="建了一个博客花了一整个下午配置了一个博客，也算完成了一个心愿，之后多花时间研究一下，争取弄得好看一点。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/1.jpg">
-<meta property="og:updated_time" content="2018-05-13T08:36:53.004Z">
+<meta property="og:updated_time" content="2018-05-13T10:30:10.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一篇博客 测试一下">
 <meta name="twitter:description" content="建了一个博客花了一整个下午配置了一个博客，也算完成了一个心愿，之后多花时间研究一下，争取弄得好看一点。">
@@ -185,12 +185,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="建了一个博客"><a href="#建了一个博客" class="headerlink" title="建了一个博客"></a>建了一个博客</h1><p>花了一整个下午配置了一个博客，也算完成了一个心愿，之后多花时间研究一下，争取弄得好看一点。<br><a id="more"></a></p>
-<h3 id="博客参考内容"><a href="#博客参考内容" class="headerlink" title="博客参考内容  "></a>博客参考内容  <br></h3><p><a href="http://litten.me/" target="_blank" rel="noopener">示例博客</a> <br><br><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">示例代码</a><br><br><a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">官方配置文档</a><br></p>
-<p><a href="http://wowubuntu.com/markdown/basic.html" target="_blank" rel="noopener">markdown语法</a></p>
-<p>markdown兼容HTML， 正好最近稍微看了一点HTML，貌似能用得上。</p>
-<h3 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h3><p>hexo new “文章名”<br>hexo -g<br>hexo -d （或者直接hexo d -g）<br>hexo clean</p>
+<h3 id="博客参考内容"><a href="#博客参考内容" class="headerlink" title="博客参考内容"></a>博客参考内容</h3><p><a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">官方配置文档</a><br><a href="http://litten.me/" target="_blank" rel="noopener">示例博客</a><br><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">示例代码</a><br><a href="http://wowubuntu.com/markdown/basic.html" target="_blank" rel="noopener">markdown语法</a></p>
+<p>markdown兼容HTML， 正好最近稍微看了一点HTML，貌似能用得上，但是有一点很奇怪的是在Atom的markdown预览插件里显示的md文件和实际网页上还是有点出入的，导致我得不断换排版。</p>
+<h3 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h3><p>hexo new “文章名”<br>hexo s 方便打开本地调试<br>hexo -g<br>hexo -d （或者直接hexo d -g）<br>hexo clean</p>
 <h3 id="文章加一些属性-放在md文件开头"><a href="#文章加一些属性-放在md文件开头" class="headerlink" title="文章加一些属性(放在md文件开头)"></a>文章加一些属性(放在md文件开头)</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">title</span> <span class="comment">#文章标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2016</span><span class="bullet">-06</span><span class="bullet">-01</span> <span class="number">23</span><span class="string">:47:44</span> <span class="comment">#文章生成时间</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">"Hexo教程"</span> <span class="comment">#文章分类目录 可以省略</span></span><br><span class="line"><span class="attr">tags:</span> <span class="comment">#文章标签 可以省略</span></span><br><span class="line"><span class="bullet">     -</span> <span class="string">标签1</span></span><br><span class="line"><span class="bullet">     -</span> <span class="string">标签2</span></span><br><span class="line"><span class="attr">description:</span> <span class="comment">#你对本页的描述</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-<h3 id="增加评论"><a href="#增加评论" class="headerlink" title="增加评论"></a>增加评论</h3><p>考虑到各种原因，最后的评论系统用了valine，因为无后台，所以需要使用leadcloud的服务，等什么时候访问量大了再考虑换平台。<br>参考的内容：<br><br><a href="https://github.com/litten/hexo-theme-yilia/blob/6d7c80d9b67a71a6ed382b8d1910ca529069c63b/layout/_partial/post/valine.ejs" target="_blank" rel="noopener">yilia主题对valine的支持</a><br><br><a href="https://valine.js.org/quickstart/" target="_blank" rel="noopener">valine主页</a><br><br><a href="https://panjunwen.com/diy-a-comment-system/" target="_blank" rel="noopener">valine相关内容介绍</a><br><br><a href="https://www.xxwhite.com/2017/Valine.html" target="_blank" rel="noopener">推荐参考博客</a><br><br>基本上就只看了这几篇文章</p>
+<h3 id="增加了访问人数和访问量的功能"><a href="#增加了访问人数和访问量的功能" class="headerlink" title="增加了访问人数和访问量的功能"></a>增加了访问人数和访问量的功能</h3><p>增加了不蒜子的流量统计功能</p>
+<h3 id="增加评论"><a href="#增加评论" class="headerlink" title="增加评论"></a>增加评论</h3><p>考虑到各种原因，最后的评论系统用了valine，因为无后台，所以需要使用leadcloud的服务，等什么时候访问量大了再考虑换平台。<br>参考的内容：<br><a href="https://github.com/litten/hexo-theme-yilia/blob/6d7c80d9b67a71a6ed382b8d1910ca529069c63b/layout/_partial/post/valine.ejs" target="_blank" rel="noopener">yilia主题对valine的支持</a><br><a href="https://valine.js.org/quickstart/" target="_blank" rel="noopener">valine主页</a><br><a href="https://panjunwen.com/diy-a-comment-system/" target="_blank" rel="noopener">valine相关内容介绍</a>&lt;br<br><a href="https://www.xxwhite.com/2017/Valine.html" target="_blank" rel="noopener">推荐参考博客</a><br>基本上就只看了这几篇文章</p>
 <p><img src="/assets/blogImg/1.jpg" alt="测试图片">  </p>
 
       
