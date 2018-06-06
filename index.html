@@ -165,7 +165,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/06/网络基础-md/">网络基础.md</a>
+      <a class="article-title" href="/2018/06/06/网络基础-md/">网络基础</a>
     </h1>
   
 
@@ -198,10 +198,8 @@
 <p>输入网址：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="regexp">//</span>www.zhihu.com<span class="regexp">/question/</span><span class="number">22689579</span></span><br></pre></td></tr></table></figure></p>
 <p>访问过程如下：<br><img src="/assets/blogImg/internet_knowledge.jpg" alt=""></p>
 <h3 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h3><h4 id="HTML、CSS和JavaScript"><a href="#HTML、CSS和JavaScript" class="headerlink" title="HTML、CSS和JavaScript"></a>HTML、CSS和JavaScript</h4><h5 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h5><p>浏览器获得HTML的内容(即上图中服务器发送HTTP响应的body(也有可能是其他内容))，会根据浏览器设置对其进行渲染。HTML(Hypertext Markup Language，超文本链接标示语言)是一种标记语言而不是编程语言，类似的还有markdown，xml等，是用来描述内容结构和格式的标记。</p>
-<p>请求的网站HTML如下：<br><img src="/assets/blogImg/internet_knowledge1.jpg" alt=""></p>
-<p>浏览器获取到HTML文本之后，会根据浏览器的设置渲染出网页并显示，如果去掉CSS，会按照浏览器的默认设置显示标签：<br><img src="/assets/blogImg/internet_knowledge2.png" alt=""></p>
-<h5 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h5><p>一般的网页都会自定义标签的样式，这时候就需要用到CSS(Cascading Style Sheets,层叠样式表)来控制内容的显示方式和格式。<br>一般有三种嵌入css的方法：内联，即通过每个标签的style属性修改样式(十分不建议使用)；在head标签中加入style标签，在其中加入css描述；外嵌，即用link标签链接一个css文件。</p>
-<p><img src="/assets/blogImg/internet_knowledge3.jpg" alt=""></p>
+<p>请求的网站HTML如下：<br><img src="/assets/blogImg/internet_knowledge1.jpg" width="50%" height="50%" align="center"><br>浏览器获取到HTML文本之后，会根据浏览器的设置渲染出网页并显示，如果去掉CSS，会按照浏览器的默认设置显示标签：<br><img src="/assets/blogImg/internet_knowledge2.png" width="50%" height="50%" align="center"></p>
+<h5 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h5><p>一般的网页都会自定义标签的样式，这时候就需要用到CSS(Cascading Style Sheets,层叠样式表)来控制内容的显示方式和格式。<br>一般有三种嵌入css的方法：内联，即通过每个标签的style属性修改样式(十分不建议使用)；在head标签中加入style标签，在其中加入css描述；外嵌，即用link标签链接一个css文件。<br><img src="/assets/blogImg/internet_knowledge3.jpg" align="center"></p>
 <p>如网站上的蓝色导航条的css描述：<br><img src="/assets/blogImg/internet_knowledge4.png" alt=""></p>
 <p>含义为：</p>
 <ul>
@@ -211,8 +209,7 @@
 <li>背景色为渐变蓝色(background)</li>
 </ul>
 <p>浏览器根据这些CSS来显示出对应的内容</p>
-<h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><p>通过HTML和CSS，可以得到一个静态的页面，当我们点击某个链接或图片的时候，浏览器会重新发新的请求，然后浏览器重定向到返回的新页面。而很多比较特殊的效果，比如淘宝广告的推荐，发布微博，评论等，不需要重定向到新网页就能实现，这就是动态网页。这时候就需要JavaScript来实现了，如下<br><img src="/assets/blogImg/internet_knowledge5.jpg" alt=""></p>
-<p>这样的效果只要写JS代码，保存在js文件中，然后在整个页面的最后(<code>&lt;\body&gt;</code>前)利用script标签把脚本引入即可。<br>这个效果是通过如下过程实现的：</p>
+<h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><p>通过HTML和CSS，可以得到一个静态的页面，当我们点击某个链接或图片的时候，浏览器会重新发新的请求，然后浏览器重定向到返回的新页面。而很多比较特殊的效果，比如淘宝广告的推荐，发布微博，评论等，不需要重定向到新网页就能实现，这就是动态网页。这时候就需要JavaScript来实现了，如下<br><img src="/assets/blogImg/internet_knowledge5.jpg" align="center"><br>这样的效果只要写JS代码，保存在js文件中，然后在整个页面的最后(<code>&lt;\body&gt;</code>前)利用script标签把脚本引入即可。<br>这个效果是通过如下过程实现的：</p>
 <ol>
 <li>鼠标悬停到标签上时创建一个新的<code>&lt;div&gt;</code>小窗口</li>
 <li>JS代码想服务器发送一个请求，得到小窗口的数据，放在小窗口中，这实际上利用了AJAX的技术(异步JavaScript和XML，Asynchronous Javascript And XML)即可以在不重新加载整个网页的情况下，产生局部更新的效果。</li>
@@ -237,7 +234,7 @@
 <li>4XX 客户端错误</li>
 <li>5XX 服务器错误<br>状态描述，专业术语并不叫这个，但是这个没什么用，就是告诉用户服务器响应的情况的，实际上服务器端的脚本可以随意设置这段内容。</li>
 </ul>
-<h5 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h5><p>最近发现一个前端的大神张秋怡，简单的浏览了一下她的事迹以及她在知乎的回答。跟我一个岁数，但是别人在本科的时候就远远超过我了，技术方面很强，进了阿里，现在离职自由职业，并且是Node.js社区国内首位核心技术委员会成员，英语能力很强，好像还会日语韩语（？）。想想虽然是同岁，别人真的远远超过我了，好多我想做的事她已经做的非常好了。再翻翻她的博客，我现在做的东西最多才她大一大二的水平。真的优秀的人又聪明，又一直push自己，所以才到了别人无法企及的高度，所以要变强，一定要不断的push自己去学习，一直呆在安逸的环境里无法成长。</p>
+<h5 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h5><p>最近发现一个前端的大神张秋怡（其实可以说是我的女神了），简单的浏览了一下她的事迹以及她在知乎的回答。跟我一个岁数，但是别人在本科的时候就远远超过我了，技术方面很强，进了阿里，现在离职自由职业，并且是Node.js社区国内首位核心技术委员会成员，英语能力很强，好像还会日语韩语（？）。想想虽然是同岁，别人真的远远超过我了，好多我想做的事她已经做的非常好了。再翻翻她的博客，我现在做的东西最多才她大一大二的水平。真的优秀的人又聪明，又一直push自己，所以才到了别人无法企及的高度，所以要变强，一定要不断的push自己去学习，一直呆在安逸的环境里无法成长。</p>
 <p>这篇文章的部分内容和所有图片参考她的<a href="https://www.zhihu.com/question/22689579/answer/22318058" target="_blank" rel="noopener">第一个知乎回答</a>。</p>
 
       
