@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="游小西的博客">
 <meta property="og:description" content="因为之后要经常写博客，所以觉得花一点时间学一下markdown的语法是有必要的。因为有HTML的基础，觉得还是挺容易的，尤其本身markdown和HTML兼容。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-23T09:47:33.479Z">
+<meta property="og:updated_time" content="2018-06-23T16:16:12.194Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown语法">
 <meta name="twitter:description" content="因为之后要经常写博客，所以觉得花一点时间学一下markdown的语法是有必要的。因为有HTML的基础，觉得还是挺容易的，尤其本身markdown和HTML兼容。">
@@ -198,7 +198,7 @@
 <p>等价于<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>Red<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>Green<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>Blue<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span>  </span><br></pre></td></tr></table></figure><br>列表项目可以包含多个段落，每个项目下的段落都必须缩进 4 个空格或是 1 个制表符。</p>
 <h4 id="代码段"><a href="#代码段" class="headerlink" title="代码段"></a>代码段</h4><p>在markdown中用{\% codeblock \%}{\% endcodeblock \%}框出代码区,或者用```将代码区包起来。<br>而如果是标记一小段行内代码，用`(反引号，键盘上数字1前面的那个)包起来。<br>等价于HTML 的 <code>&lt;pre&gt;</code> 和 <code>&lt;code&gt;</code> 标签。</p>
 <h4 id="引用网页"><a href="#引用网页" class="headerlink" title="引用网页"></a>引用网页</h4><p>[id](href)<br>前面是网页的文字描述，后面是网页的链接<br>等价于<code>&lt;a href = &quot;href&quot;&gt;id&lt;/a&gt;</code></p>
-<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><p>![alt text](path)<br>等价于<code>&lt;img src = &quot;path&quot; alt = &quot;alt text&quot;&gt;</code></p>
+<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><p>![alt text](path)<br>等价于<code>&lt;img src = &quot;path&quot; alt = &quot;alt text&quot;&gt;</code><br>图片居中<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">center</span>&gt;</span></span><br><span class="line">![]()</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h4><p>Markdown 使用星号*和底线_作为标记强调字词的符号<br>被 * 或 _ 包围的字词会被转成用 <code>&lt;em&gt;</code> 标签包围<br>用两个 * 或 _ 包起来的话，则会被转成 <code>&lt;strong&gt;</code></p>
 <h4 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h4><p>‘’’<br>| Tables | Are | Cool |<br>|———-|:————-:|——:|<br>| col 1 is | left-aligned | $1600 |<br>| col 2 is | centered | $12 |<br>| col 3 is | right-aligned | $1 |<br>‘’’</p>
 <p>| Tables | Are | Cool | |———-|:————-:|——:| | col 1 is | left-aligned | $1600 | | col 2 is | centered | $12 | | col 3 is | right-aligned | $1 |</p>
