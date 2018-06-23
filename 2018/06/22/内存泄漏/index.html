@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/memory_leak3.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/memory_leak4.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/memory_leak5.bmp">
-<meta property="og:updated_time" content="2018-06-23T16:07:43.457Z">
+<meta property="og:updated_time" content="2018-06-23T16:10:39.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="内存泄漏">
 <meta name="twitter:description" content="这篇主要介绍了内存泄漏的问题，并着重讨论了C/C++下内存泄漏的检测和避免的问题。 内存泄漏内存泄漏(Memory Leak)是指程序中已动态分配的堆内存由于某种原因程序未释放或者无法释放，造成系统内存的浪费，导致程序运行速度的减慢甚至系统崩溃等后果。">
@@ -246,29 +246,29 @@ width: 30%;
 <table>
 <thead>
 <tr>
-<th>名称</th>
+<th style="text-align:center">名称</th>
 <th style="text-align:center">内容</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>代码段（text）</td>
+<td style="text-align:center">代码段（text）</td>
 <td style="text-align:center">存放二进制代码和一些常量（只读）</td>
 </tr>
 <tr>
-<td>数据段</td>
+<td style="text-align:center">数据段</td>
 <td style="text-align:center">存放初始化变量，包括全局变量，局部静态变量，全局静态变量，常量</td>
 </tr>
 <tr>
-<td>bss</td>
+<td style="text-align:center">bss</td>
 <td style="text-align:center">存放未初始化变量，包括全局变量，全局静态变量</td>
 </tr>
 <tr>
-<td>堆</td>
+<td style="text-align:center">堆</td>
 <td style="text-align:center">动态分配的内存</td>
 </tr>
 <tr>
-<td>栈</td>
+<td style="text-align:center">栈</td>
 <td style="text-align:center">局部变量，函数参数（调用栈)</td>
 </tr>
 </tbody>
