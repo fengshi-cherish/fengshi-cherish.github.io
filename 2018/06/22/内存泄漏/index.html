@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/memory_leak3.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/memory_leak4.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/memory_leak5.bmp">
-<meta property="og:updated_time" content="2018-06-23T14:57:59.777Z">
+<meta property="og:updated_time" content="2018-06-23T15:01:28.142Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="内存泄漏">
 <meta name="twitter:description" content="这篇主要介绍了内存泄漏的问题，并着重讨论了C/C++下内存泄漏的检测和避免的问题。 内存泄漏内存泄漏(Memory Leak)是指程序中已动态分配的堆内存由于某种原因程序未释放或者无法释放，造成系统内存的浪费，导致程序运行速度的减慢甚至系统崩溃等后果。">
@@ -213,7 +213,9 @@
 <li>泄漏的内存块的大小为 2bytes</li>
 <li>块中的数据为”a”<br>简单来说，就是在程序第90次分配内存时，分配两个字节”a”泄漏了。<br>此时，为了找到内存泄漏的源头，在主函数开始加上 <code>_CrtSetBreakAlloc(90);</code>，那么程序就会在第90次分配内存时触发中断，然后观察调用堆栈，就可以找到出问题的函数。（此处安利代码图，发现可以很直观的看到函数的调用关系）</li>
 </ul>
-<p><img src="/assets/blogImg/memory_leak2.png" alt=""><br><img src="/assets/blogImg/memory_leak3.png" alt=""><br><img src="/assets/blogImg/memory_leak4.png" alt=""></p>
+<p><img src="/assets/blogImg/memory_leak2.png" alt=""></p>
+<p><img src="/assets/blogImg/memory_leak3.png" alt=""></p>
+<p><img src="/assets/blogImg/memory_leak4.png" alt=""></p>
 <p>这种方法适用于C中的malloc函数，当使用C++中的new，则需要重新定义new函数，才能看到文件和行号。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> _DEBUG</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> DBG_NEW</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> new DBG_NEW</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>  <span class="comment">// _DEBUG</span></span></span><br></pre></td></tr></table></figure>
 <h5 id="Linux、OSX下"><a href="#Linux、OSX下" class="headerlink" title="Linux、OSX下"></a>Linux、OSX下</h5><p>Linux、OSX下，使用valgrind工具（apt-get install valgrind、 brew install valgrind），然后直接在命令行执行<code>valgrind --leak-check=full  ./xx</code>就可以看到内存泄漏的报告。同时valgrind还有检测未初始化变量等功能（这种行为在某些编译器里是会赋初值，而另一些则会随机赋值，这种行为是很危险的。）</p>
