@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/double_store.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/CPU_BigEndian.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/CPU_LittleEndian.png">
-<meta property="og:updated_time" content="2018-09-17T12:31:33.970Z">
+<meta property="og:updated_time" content="2018-09-17T12:36:16.892Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据在内存中的存储方式.md">
 <meta name="twitter:description" content="数据在内存中的存储">
@@ -198,12 +198,12 @@
 </ul>
 <p>关于指数：</p>
 <ol>
-<li>计算机表示的阶码 = E(数值上的指数)-一个中间数。对于8位的E,这个中间数是127;对于11位的E,这个中间数是1023,即阶码偏移量。这个就是移码的表示形式。      即计算机存储值 = 真正的指数 - 中间数, 真正的指数 = 计算机存储值  + 中间数。 这是针对于阶码(计算机存储值)非全0或者非全1的表示方法(所以范围是1-254)。</li>
+<li>计算机表示的阶码 = E(数值上的指数)-一个中间数。对于8位的E,这个中间数是127;对于11位的E,这个中间数是1023,即阶码偏移量。这个就是移码的表示形式。<br>即计算机存储值 = 真正的指数 - 中间数, 真正的指数 = 计算机存储值  + 中间数。<br>这是针对于阶码(计算机存储值)非全0或者非全1的表示方法(所以范围是1-254)。</li>
 <li>E全为0。这时，浮点数的指数E等于1-127(或者1-1023)，有效数字M不再加上第一位的1，而是还原为0.xxxxxx的小数。这样做是为了表示±0，以及接近于0的很小的数字。</li>
 <li>E全为1。这时,如果有效数字M全为0,表示±无穷大（正负取决于符号位s）;如果有效数字M不全为0,表示这个数不是一个数(NaN)。</li>
 </ol>
-<p>单精度 float(32位)<br><img src="/assets/blogImg/float_store.png" alt=""><br>下标序号  31      23-30   0-22<br>表示内容 符号     阶码    尾数<br>占位数    1         8      23</p>
-<p>双精度 double(64位)<br><img src="/assets/blogImg/double_store.png" alt=""><br>下标序号      63      52-62   0-51<br>表示内容  符号     阶码    尾数<br>占位数    1         11     52</p>
+<p>单精度 float(32位)<br><img src="/assets/blogImg/float_store.png" alt=""><br>下标序号    31      23-30    0-22<br>表示内容    符号     阶码     尾数<br>占位数       1        8       23</p>
+<p>双精度 double(64位)<br><img src="/assets/blogImg/double_store.png" alt=""><br>下标序号     63      52-62     0-51<br>表示内容    符号      阶码      尾数<br>占位数       1        11        52</p>
 <table>
 <thead>
 <tr>
